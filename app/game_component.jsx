@@ -6,11 +6,15 @@ class GameComponent extends React.Component {
         super(props);
     }
 
+    tick() {
+        this.inventory.tick();
+    }
+
     render() {
         return (
             <div>
               You are begging for money on the subway.
-              <Inventory />
+              <Inventory ref={inventory => this.inventory = inventory} />
             </div>
         );
     }

@@ -5,10 +5,10 @@ import ReactTestUtils from 'react-addons-test-utils'
 
 
 describe('GameComponent', function () {
-    let renderedDOM;
+    let element, renderedDOM;
 
     beforeEach(function() {
-        let element = ReactTestUtils.renderIntoDocument(React.createElement(GameComponent));
+        element = ReactTestUtils.renderIntoDocument(React.createElement(GameComponent));
         renderedDOM = ReactDOM.findDOMNode(element);
     });
 
@@ -18,6 +18,11 @@ describe('GameComponent', function () {
 
     it('shows your money', function () {
         expect(renderedDOM.textContent).toContain('0 dollars');
+    });
+
+    it('will let your money grow', function () {
+        element.tick();
+        expect(renderedDOM.textContent).toContain('1 dollars');
     });
 
 });
