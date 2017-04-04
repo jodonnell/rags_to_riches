@@ -1,3 +1,6 @@
+var path = require('path');
+var APP_DIR = path.resolve(__dirname, 'app');
+
 module.exports = function(config) {
   config.set({
     frameworks: ['jasmine'],
@@ -16,8 +19,20 @@ module.exports = function(config) {
       'test/**/*_test.js': ['webpack']
     },
 
+    reporters: [ 'dots' ], //report results in this format
+
     webpack: {
-      // karma watches the test entry points
+        module : {
+            loaders : [
+                {
+                    test : /\.jsx?/,
+                    include : APP_DIR,
+                    loader : 'babel-loader'
+                }
+            ]
+        }
+
+        // karma watches the test entry points
       // (you don't need to specify the entry option)
       // webpack watches dependencies
 
