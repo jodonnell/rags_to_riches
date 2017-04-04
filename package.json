@@ -24,8 +24,9 @@
   },
   "scripts": {
     "dev": "webpack -d --watch",
-    "build": "webpack -p",
-    "test": "karma start",
+    "prod": "webpack -p",
+    "test-start": "karma start",
+    "test": "karma run",
     "lint": "eslint app/* spec/* --quiet"
   },
   "author": "Jacob O'Donnell",
