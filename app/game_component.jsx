@@ -1,4 +1,5 @@
 import React from 'react';
+import Inventory from './inventory.jsx';
 
 class GameComponent extends React.Component {
     constructor(props) {
@@ -9,6 +10,7 @@ class GameComponent extends React.Component {
         return (
             <div>
               You are begging for money on the subway.
+              <Inventory />
             </div>
         );
     }
