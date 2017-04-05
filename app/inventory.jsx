@@ -1,3 +1,4 @@
+import styles from './assets/styles/inventory.css';
 import React from 'react';
 
 class Inventory extends React.Component {
@@ -9,7 +10,7 @@ class Inventory extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className={styles.inventory}>
               {this.state.dollars} dollars
             </div>
         );
