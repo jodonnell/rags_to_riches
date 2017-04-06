@@ -14,22 +14,28 @@ var config = {
         rules: [
             {
                 test: /\.css$/,
+                include: [path.resolve(__dirname, APP_DIR)],
                 use: [
                     'style-loader',
                     {
                         loader: 'css-loader',
                         options: {
+                            sourceMap: true,
                             importLoaders: 1,
                             modules: true
+                        }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: 'inline',
                         }
                     }
                 ]
             },
             {
                 test: /\.jsx?/,
-                 include: [
-                     path.resolve(__dirname, APP_DIR)
-                 ],
+                include: [path.resolve(__dirname, APP_DIR)],
                 use: 'babel-loader'
             }
         ]

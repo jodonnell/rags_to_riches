@@ -1,0 +1,10 @@
+.gameComponent {
+  display: flex;
+  margin-top: 50px;
+}
+
+.notificationsArea {
+  margin-right: 24px;
+  width: 70%;
+  height: 50%;
+}
