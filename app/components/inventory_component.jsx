@@ -4,20 +4,20 @@ import React from 'react';
 class InventoryComponent extends React.Component {
     constructor(props) {
         super(props);
-
-        this.state = {dollars: 0};
     }
 
     render() {
         return (
             <div className={styles.inventory}>
-              {this.state.dollars} dollars
+              {this.props.inventory.things.map((thing, index) => this.thing(thing, index))}
             </div>
         );
     }
 
-    tick() {
-        this.setState({dollars: this.state.dollars + 1});
+    thing(thing, index) {
+        return <div key={index}>
+            {thing}
+        </div>;
     }
 
 }
