@@ -1,7 +1,7 @@
-import styles from './assets/styles/notifications_area.css';
+import styles from '../assets/styles/notifications_area.css';
 import React from 'react';
 
-class NotificationsArea extends React.Component {
+class NotificationsAreaComponent extends React.Component {
     constructor(props) {
         super(props);
 
@@ -28,4 +28,4 @@ class NotificationsArea extends React.Component {
 
 }
 
-export default NotificationsArea;
+export default NotificationsAreaComponent;

@@ -1,7 +1,7 @@
-import styles from './assets/styles/inventory.css';
+import styles from '../assets/styles/inventory.css';
 import React from 'react';
 
-class Inventory extends React.Component {
+class InventoryComponent extends React.Component {
     constructor(props) {
         super(props);
 
@@ -22,4 +22,4 @@ class Inventory extends React.Component {
 
 }
 
-export default Inventory;
+export default InventoryComponent;

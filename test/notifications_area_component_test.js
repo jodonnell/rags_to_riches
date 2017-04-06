@@ -1,14 +1,14 @@
-import NotificationsArea from '../app/notifications_area.jsx';
+import NotificationsAreaComponent from '../app/components/notifications_area_component.jsx';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils'
 
 
-describe('NotificationsArea', function () {
+describe('NotificationsAreaComponent', function () {
     let element, renderedDOM;
 
     beforeEach(function() {
-        element = ReactTestUtils.renderIntoDocument(React.createElement(NotificationsArea));
+        element = ReactTestUtils.renderIntoDocument(React.createElement(NotificationsAreaComponent));
         renderedDOM = ReactDOM.findDOMNode(element);
     });
 

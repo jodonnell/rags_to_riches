@@ -1,7 +1,7 @@
 import React from 'react';
-import Inventory from './inventory.jsx';
-import NotificationsArea from './notifications_area.jsx';
-import styles from './assets/styles/game_component.css';
+import InventoryComponent from './inventory_component.jsx';
+import NotificationsAreaComponent from './notifications_area_component.jsx';
+import styles from '../assets/styles/game_component.css';
 
 class GameComponent extends React.Component {
     constructor(props) {
@@ -16,9 +16,9 @@ class GameComponent extends React.Component {
         return (
             <div className={styles.gameComponent}>
               <div className={styles.notificationsArea}>
-                <NotificationsArea />
+                <NotificationsAreaComponent />
               </div>
-              <Inventory ref={inventory => this.inventory = inventory} />
+              <InventoryComponent ref={inventory => this.inventory = inventory} />
             </div>
         );
     }
