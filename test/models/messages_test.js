@@ -1,4 +1,5 @@
 import Messages from '../../app/models/messages.js';
+import Message from '../../app/models/message.js';
 
 describe('Messages', function () {
     let messages;
@@ -12,6 +13,11 @@ describe('Messages', function () {
             messages.add(i);
         }
 
-        expect(messages.mostRecent()).toEqual([40, 41, 42, 43, 44, 45, 46, 47, 48, 49]);
+        const messagesExpect = [];
+        for (let i = 40; i < 50; i++) {
+            messagesExpect.push(new Message(i + 1, i));
+        }
+
+        expect(messages.mostRecent()).toEqual(messagesExpect);
     });
 });

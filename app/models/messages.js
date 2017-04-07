@@ -1,11 +1,14 @@
 import _ from 'lodash';
+import Message from './message.js';
 
 class Messages {
     constructor() {
-        this._messages = ['You are begging for money on the subway.'];
+        this._messages = [];
+        this.add('You are begging for money on the subway.');
     }
 
-    add(message) {
+    add(messageString) {
+        const message = new Message(this._messages.length, messageString);
         this._messages.push(message);
     }
 
