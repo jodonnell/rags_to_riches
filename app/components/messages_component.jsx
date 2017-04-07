@@ -15,7 +15,7 @@ class MessagesComponent extends React.Component {
     render() {
         return (
             <div className={styles.messagesArea}>
-              {this.props.messages._messages.map((message, index) => this.message(message, index))}
+              {this.props.messages.mostRecent().map((message, index) => this.message(message, index))}
             </div>
         );
     }

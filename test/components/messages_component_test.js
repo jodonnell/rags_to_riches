@@ -1,5 +1,5 @@
-import MessagesComponent from '../app/components/messages_component.jsx';
-import Messages from '../app/models/messages.js';
+import MessagesComponent from '../../app/components/messages_component.jsx';
+import Messages from '../../app/models/messages.js';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils'
