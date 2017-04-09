@@ -10,6 +10,8 @@ class GameComponent extends React.Component {
 
         this.game = new Game();
         this.state = {messages: this.game.messages, inventory: this.game.inventory};
+
+        this.askForMoney = this.askForMoney.bind(this);
     }
 
     tick() {
@@ -20,6 +22,7 @@ class GameComponent extends React.Component {
     render() {
         return (
             <div className={styles.gameComponent}>
+              <div className="askForMoney" onClick={this.askForMoney}>Ask for money</div>
               <div className={styles.messagesArea}>
                 <MessagesComponent messages={this.state.messages}/>
               </div>
@@ -28,6 +31,10 @@ class GameComponent extends React.Component {
         );
     }
 
+    askForMoney() {
+        this.game.inventory.dollars += 1;
+        this.setState({inventory: this.game.inventory});
+    }
 }
 
 export default GameComponent;

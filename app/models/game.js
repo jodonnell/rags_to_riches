@@ -9,7 +9,6 @@ class Game {
 
     tick() {
         this.messages.add('bang!');
-        this.inventory.tick();
     }
 }
 
