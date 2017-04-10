@@ -1,4 +1,5 @@
 import styles from '../assets/styles/interactive.css';
+import ButtonComponent from './button_component.jsx';
 import React from 'react';
 
 class InteractiveComponent extends React.Component {
@@ -9,7 +10,7 @@ class InteractiveComponent extends React.Component {
 
     render() {
         return (<div>
-                <div data-name="askForMoney" className={styles.button} onClick={this.askForMoney}>Ask for money</div>
+                <ButtonComponent name="askForMoney" handleClick={this.askForMoney} text="Ask for money" />
                 </div>);
     }
 
