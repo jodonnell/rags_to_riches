@@ -2,6 +2,7 @@ import React from 'react';
 import Game from '../models/game.js';
 import InventoryComponent from './inventory_component.jsx';
 import MessagesComponent from './messages_component.jsx';
+import InteractiveComponent from './interactive_component.jsx';
 import styles from '../assets/styles/game_component.css';
 
 class GameComponent extends React.Component {
@@ -10,7 +11,6 @@ class GameComponent extends React.Component {
 
         this.game = new Game();
         this.state = {messages: this.game.messages, inventory: this.game.inventory};
-
         this.askForMoney = this.askForMoney.bind(this);
     }
 
@@ -22,7 +22,7 @@ class GameComponent extends React.Component {
     render() {
         return (
             <div className={styles.gameComponent}>
-              <div className="askForMoney" onClick={this.askForMoney}>Ask for money</div>
+              <InteractiveComponent onAskForMoney={this.askForMoney} />
               <div className={styles.messagesArea}>
                 <MessagesComponent messages={this.state.messages}/>
               </div>

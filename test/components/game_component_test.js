@@ -27,7 +27,7 @@ describe('GameComponent', function () {
 
     it('makes a button to ask for money', function () {
         element.tick();
-        const button = renderedDOM.querySelector('.askForMoney');
+        const button = renderedDOM.querySelector('[data-name="askForMoney"]');
         ReactTestUtils.Simulate.click(button);
 
         expect(renderedDOM.textContent).toContain('1 dollars');
