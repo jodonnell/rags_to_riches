@@ -1,0 +1,29 @@
+@keyframes right {
+    0%   {right: 100%;}
+    100%   {right: 0%;}
+}
+
+.active {
+    border: 1px solid black;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.inactive {
+    border: 1px solid grey;
+    color: grey;
+    padding: 4px;
+    position: relative;
+}
+
+.animate {
+    background-color: grey;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 50%;
+
+    animation-name: right;
+    animation-timing-function: linear;
+}
