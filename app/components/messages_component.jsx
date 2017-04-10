@@ -17,7 +17,12 @@ class MessagesComponent extends React.Component {
         return (
             <div className={styles.messagesArea}>
               <ReactCSSTransitionGroup
-                 transitionName="example"
+                 transitionName={ {
+                     enter: styles.animationEnter,
+                     enterActive: styles.animationEnterActive,
+                     leave: styles.animationLeave,
+                     leaveActive: styles.animationLeaveActive
+                 } }
                  transitionEnterTimeout={500}
                  transitionLeaveTimeout={300}>
                 {this.props.messages.mostRecent().map((message, index) => this.message(message, index))}
