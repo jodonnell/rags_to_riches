@@ -10,6 +10,10 @@ class Game {
     tick() {
         this.messages.add('bang!');
     }
+
+    askForMoney() {
+        this.inventory.dollars += 1;
+    }
 }
 
 export default Game;

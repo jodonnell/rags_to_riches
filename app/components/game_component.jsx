@@ -32,7 +32,7 @@ class GameComponent extends React.Component {
     }
 
     askForMoney() {
-        this.game.inventory.dollars += 1;
+        this.game.askForMoney();
         this.setState({inventory: this.game.inventory});
     }
 }
