@@ -22,7 +22,9 @@ class GameComponent extends React.Component {
     render() {
         return (
             <div className={styles.gameComponent}>
-              <InteractiveComponent onAskForMoney={this.askForMoney} />
+              <div className={styles.interactive}>
+                <InteractiveComponent onAskForMoney={this.askForMoney} />
+              </div>
               <div className={styles.messagesArea}>
                 <MessagesComponent messages={this.state.messages}/>
               </div>
