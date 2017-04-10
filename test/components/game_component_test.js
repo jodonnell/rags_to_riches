@@ -2,7 +2,7 @@ import GameComponent from '../../app/components/game_component.jsx';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-dom/test-utils'
-
+import _ from 'lodash';
 
 describe('GameComponent', function () {
     let element, renderedDOM;
@@ -31,6 +31,17 @@ describe('GameComponent', function () {
         ReactTestUtils.Simulate.click(button);
 
         expect(renderedDOM.textContent).toContain('1 dollars');
+    });
+
+    it('lets you buy a hat when you have 10 dollars', function () {
+        element.game.inventory.dollars = 10;
+        element.tick();
+
+        const button = renderedDOM.querySelector('[data-name="buyHat"]');
+        ReactTestUtils.Simulate.click(button);
+
+        expect(renderedDOM.textContent).toContain('1 very cool hat');
+        expect(element.game.inventory.dollars).toBe(0);
     });
 
 });

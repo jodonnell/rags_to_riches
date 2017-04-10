@@ -14,19 +14,26 @@ class ButtonComponent extends React.Component {
             return (<div data-name={this.props.name} className={styles.active} onClick={this.handleClick}>{this.props.text}</div>);
         }
         else {
-            const animateStyles = {animationDuration: (this.cooldown / 1000) + 's'};
-            return (<div data-name={this.props.name} className={styles.inactive}><div style={animateStyles} className={styles.animate}></div><div>{this.props.text}</div></div>);
+            return (<div data-name={this.props.name} className={styles.inactive}><div style={this.animationStyle()} className={styles.animate}></div><div>{this.props.text}</div></div>);
         }
+    }
+
+    componentWillUnmount() {
+        clearTimeout(this.timerId);
     }
 
     handleClick() {
         this.props.handleClick();
-        setTimeout(() => {this.resetCooldown();}, this.cooldown);
+        this.timerId = setTimeout(() => {this.resetCooldown();}, this.cooldown);
         this.setState({active: false});
     }
 
     resetCooldown() {
         this.setState({active: true});
+    }
+
+    animationStyle() {
+        return {animationDuration: (this.cooldown / 1000) + 's'};
     }
 
     get cooldown() {

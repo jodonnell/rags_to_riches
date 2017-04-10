@@ -12,6 +12,7 @@ class GameComponent extends React.Component {
         this.game = new Game();
         this.state = {messages: this.game.messages, inventory: this.game.inventory};
         this.askForMoney = this.askForMoney.bind(this);
+        this.buyHat = this.buyHat.bind(this);
     }
 
     tick() {
@@ -23,7 +24,7 @@ class GameComponent extends React.Component {
         return (
             <div className={styles.gameComponent}>
               <div className={styles.interactive}>
-                <InteractiveComponent onAskForMoney={this.askForMoney} />
+                <InteractiveComponent game={this.game} onBuyHat={this.buyHat} onAskForMoney={this.askForMoney} />
               </div>
               <div className={styles.messagesArea}>
                 <MessagesComponent messages={this.state.messages}/>
@@ -37,6 +38,12 @@ class GameComponent extends React.Component {
         this.game.askForMoney();
         this.setState({inventory: this.game.inventory});
     }
+
+    buyHat() {
+        this.game.buyHat();
+        this.setState({inventory: this.game.inventory});
+    }
+
 }
 
 export default GameComponent;

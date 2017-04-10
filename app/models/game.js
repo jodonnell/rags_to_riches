@@ -14,6 +14,11 @@ class Game {
     askForMoney() {
         this.inventory.dollars += 1;
     }
+
+    buyHat() {
+        this.inventory.dollars -= 10;
+        this.inventory.hats += 1;
+    }
 }
 
 export default Game;
