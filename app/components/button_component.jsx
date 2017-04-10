@@ -4,6 +4,8 @@ import React from 'react';
 class ButtonComponent extends React.Component {
     constructor(props) {
         super(props);
+
+        this.active = false;
         this.handleClick = this.handleClick.bind(this);
     }
 
@@ -12,7 +14,13 @@ class ButtonComponent extends React.Component {
     }
 
     handleClick() {
+        if (this.active) {
+            return;
+        }
+
         this.props.handleClick();
+        setTimeout(() => {this.active = false;}, parseInt(this.props.cooldown));
+        this.active = true;
     }
 }
 

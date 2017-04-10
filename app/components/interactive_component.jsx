@@ -10,7 +10,7 @@ class InteractiveComponent extends React.Component {
 
     render() {
         return (<div>
-                <ButtonComponent name="askForMoney" handleClick={this.askForMoney} text="Ask for money" />
+                <ButtonComponent name="askForMoney" handleClick={this.askForMoney} text="Ask for money" cooldown="1500" />
                 </div>);
     }
 
