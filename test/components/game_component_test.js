@@ -1,8 +1,7 @@
 import GameComponent from '../../app/components/game_component.jsx';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactTestUtils from 'react-dom/test-utils'
-import _ from 'lodash';
+import ReactTestUtils from 'react-dom/test-utils';
 
 describe('GameComponent', function () {
     let element, renderedDOM;

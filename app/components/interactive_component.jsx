@@ -1,5 +1,5 @@
-import styles from '../assets/styles/interactive.css';
 import ButtonComponent from './button_component.jsx';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 class InteractiveComponent extends React.Component {
@@ -17,14 +17,13 @@ class InteractiveComponent extends React.Component {
     }
 
     askForMoneyButton() {
-        return (<ButtonComponent name="askForMoney" handleClick={this.askForMoney} text="Ask for money" cooldown="1500" />);
+        return (<ButtonComponent name="askForMoney" handleClick={this.askForMoney} text="Ask for money" cooldown={1500} />);
     }
 
     buyHatButton() {
         if (this.props.game.inventory.dollars > 9) {
-            return (<ButtonComponent name="buyHat" handleClick={this.buyHat} text="Buy a very cool hat" cooldown="1500" />);
+            return (<ButtonComponent name="buyHat" handleClick={this.buyHat} text="Buy a very cool hat" cooldown={1500} />);
         }
-        return;
     }
 
     askForMoney() {
@@ -35,5 +34,11 @@ class InteractiveComponent extends React.Component {
         this.props.onBuyHat();
     }
 }
+
+InteractiveComponent.propTypes = {
+    onAskForMoney: PropTypes.func.isRequired,
+    onBuyHat: PropTypes.func.isRequired,
+    game: PropTypes.object.isRequired
+};
 
 export default InteractiveComponent;

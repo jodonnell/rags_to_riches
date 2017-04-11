@@ -1,4 +1,5 @@
 import styles from '../assets/styles/button.css';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 class ButtonComponent extends React.Component {
@@ -40,5 +41,12 @@ class ButtonComponent extends React.Component {
         return parseInt(this.props.cooldown);
     }
 }
+
+ButtonComponent.propTypes = {
+    handleClick: PropTypes.func.isRequired,
+    name: PropTypes.string,
+    text: PropTypes.string.isRequired,
+    cooldown: PropTypes.number.isRequired
+};
 
 export default ButtonComponent;

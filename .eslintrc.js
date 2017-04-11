@@ -27,7 +27,8 @@ module.exports = {
         "no-useless-return": 2,
         "no-useless-escape": 2,
         "camelcase": 2,
-        "no-var": 2
+        "no-var": 2,
+        "react/no-find-dom-node": 0
     },
     "globals": {
     },

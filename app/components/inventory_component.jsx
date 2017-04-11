@@ -1,4 +1,5 @@
 import styles from '../assets/styles/inventory.css';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 class InventoryComponent extends React.Component {
@@ -21,5 +22,9 @@ class InventoryComponent extends React.Component {
     }
 
 }
+
+InventoryComponent.propTypes = {
+    inventory: PropTypes.object.isRequired
+};
 
 export default InventoryComponent;
