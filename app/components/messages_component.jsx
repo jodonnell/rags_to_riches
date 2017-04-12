@@ -9,7 +9,7 @@ class MessagesComponent extends React.Component {
     }
 
     message(message) {
-        return <div key={message.id}>
+        return <div className={styles.message} key={message.id}>
             {message.message}
         </div>;
     }
