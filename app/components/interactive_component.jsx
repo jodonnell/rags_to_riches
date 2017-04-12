@@ -18,13 +18,14 @@ class InteractiveComponent extends React.Component {
     }
 
     askForMoneyButton() {
-        return (<ButtonComponent name="askForMoney" handleClick={this.askForMoney} text="Ask for money" cooldown={1500} />);
+        return (<ButtonComponent name="askForMoney" handleClick={this.askForMoney} text="Ask for money" cooldown={10} />);
     }
 
     buyHatButton() {
         if (this.props.game.inventory.dollars > 9) {
             return (<ButtonComponent name="buyHat" handleClick={this.buyHat} text="Buy a very cool hat" cooldown={1500} />);
         }
+        return null;
     }
 
     askForMoney() {
