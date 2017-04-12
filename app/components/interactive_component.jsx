@@ -1,3 +1,4 @@
+import styles from '../assets/styles/interactive.css';
 import ButtonComponent from './button_component.jsx';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -11,8 +12,8 @@ class InteractiveComponent extends React.Component {
 
     render() {
         return (<div>
-                {this.askForMoneyButton()}
-                {this.buyHatButton()}
+                <div className={styles.button}>{this.askForMoneyButton()}</div>
+                <div className={styles.button}>{this.buyHatButton()}</div>
                 </div>);
     }
 
