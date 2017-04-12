@@ -18,6 +18,7 @@ class Game {
     buyHat() {
         this.inventory.dollars -= 10;
         this.inventory.hats += 1;
+        this.messages.add('Someone gave you some money, that was pretty cool.');
     }
 }
 

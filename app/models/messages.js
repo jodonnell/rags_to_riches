@@ -15,6 +15,10 @@ class Messages {
     mostRecent() {
         return _.takeRight(this._messages, 10);
     }
+
+    last() {
+        return _.last(this._messages);
+    }
 }
 
 export default Messages;
