@@ -19,6 +19,7 @@ module.exports = function(config) {
       'test/**/*_test.js': ['webpack']
     },
 
+    reportSlowerThan: 250,
     reporters: [ 'dots' ], //report results in this format
 
     webpack: {
