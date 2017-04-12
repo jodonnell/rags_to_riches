@@ -8,11 +8,11 @@ class Game {
     }
 
     tick() {
-        this.messages.add('bang!');
     }
 
     askForMoney() {
         this.inventory.dollars += 1;
+        this.messages.add('Someone gave you some money, that was pretty cool.');
     }
 
     buyHat() {
