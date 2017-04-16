@@ -31,6 +31,8 @@ module.exports = {
         "react/no-find-dom-node": 0
     },
     "globals": {
+        "mixpanel": true,
+        "process": true
     },
      "parserOptions": {
          "sourceType": "module",

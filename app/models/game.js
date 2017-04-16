@@ -1,10 +1,12 @@
 import Inventory from './inventory.js';
 import Messages from './messages.js';
+import Tracking from './tracking.js';
 
 class Game {
     constructor() {
         this.inventory = new Inventory();
         this.messages = new Messages();
+        Tracking.track('Page Load');
     }
 
     tick() {
