@@ -1,4 +1,5 @@
 import styles from '../assets/styles/button.css';
+import Tracking from '../models/tracking.js';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -24,6 +25,7 @@ class ButtonComponent extends React.Component {
     }
 
     handleClick() {
+        Tracking.track(this.props.text);
         this.props.handleClick();
         this.timerId = setTimeout(() => {this.resetCooldown();}, this.cooldown);
         this.setState({active: false});
