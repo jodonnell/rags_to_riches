@@ -1,6 +1,6 @@
 * Unemployment
 ** add analytics
-**
+*** tie to a user (maybe ask for some silly information to create one, first last name, or alias, favorite color, concatenate)
 * Ideas
 ** Terminal
 *** you get a home message
@@ -21,3 +21,61 @@
 *** whois a domain
 *** goto his webpage
 ***
+
+
+The game design loop.
+http://www.gamasutra.com/blogs/JosephKim/20140323/213728/The_Compulsion_Loop_Explained.php
+
+
+
+
+Maybe a random mugging event, lose all cash on hand.
+
+Maybe you can get a credit card.
+
+Take out a loan to start a business.
+
+Buy a house.
+
+Meet a lady.
+
+Have kids.
+
+Buy stocks.
+
+Buy index funds.
+
+Get a job.
+
+Every tick is a day.
+
+Inflation?
+
+Does Disaster ever strike?
+
+A/B Test.
+
+
+-- Busy Grand Hall --
+
+You wake up, you have no idea whats going on.  You are only wearing underpants.  They have hearts on them.
+1 underpants
+
+People are walking by you, they do not look at you.
+
+You are very hungry.
+
+Ask for money button appears.
+
+
+You notice a hat shop near by.  You feel an overwhelming need to buy a hat.
+
+This hat really becomes you.  You set it down next to you.
+
+*Asking for money now gives you 2 dollars*
+
+No longer prompts you to buy a hat.
+
+At 20 dollars it prompts you to open a bank account.
+
+You walk into the bank.  The teller takes one look at your hat and opens a checking account for you.
