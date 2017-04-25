@@ -22,7 +22,7 @@ class InteractiveComponent extends React.Component {
     }
 
     buyHatButton() {
-        if (this.props.game.inventory.dollars > 9) {
+        if (this.props.game.canBuyHat()) {
             return (<ButtonComponent name="buyHat" handleClick={this.buyHat} text="Buy a very cool hat" cooldown={1500} />);
         }
         return null;
